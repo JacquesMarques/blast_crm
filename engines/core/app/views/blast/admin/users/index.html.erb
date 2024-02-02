@@ -1,0 +1,24 @@
+<h2 class='float-left'>Users</h2>
+<%= render 'admin/shared/nav' %>
+
+<div class='clearfix'></div>
+<hr/>
+
+<table class="table table-bordered">
+  <thead class="table-active">
+  <th>ID</th>
+  <th>Email</th>
+  <th>Signed Up</th>
+  <th>Admin?</th>
+  </thead>
+  <tbody>
+  <%- @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= user.email %></td>
+      <td><%= user.created_at.strftime("%d %b. %Y") %></td>
+      <td><%= user.admin? %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

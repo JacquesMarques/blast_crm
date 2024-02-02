@@ -1,0 +1,14 @@
+<ul class="nav nav-pills float-right">
+  <li class="nav-item">
+    <%= link_to 'Dashboard', blast.admin_path,
+                class: "nav-link #{active(admin_path)}" %>
+  </li>
+
+  <li class="nav-item">
+    <%= link_to blast.admin_users_path,
+                class: "nav-link #{active(blast.admin_users_path)}" do %>
+      Users
+      <span class="badge">(<%= Blast::User.count %>)</span>
+    <% end %>
+  </li>
+</ul>

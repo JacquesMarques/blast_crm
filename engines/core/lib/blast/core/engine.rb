@@ -3,6 +3,8 @@ module Blast
     class Engine < ::Rails::Engine
       isolate_namespace Blast
 
+      paths['app/views'] << 'app/views/blast'
+
       initializer :append_migrations do |app|
         unless app.root.to_s.match?(root.to_s)
           config.paths['db/migrate'].expanded.each do |p|
