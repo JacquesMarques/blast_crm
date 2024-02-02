@@ -1,5 +1,4 @@
 <h2 class='float-left'>Admin Panel</h2>
-
 <%= render 'admin/shared/nav' %>
 
 <div class='clearfix'></div>
@@ -7,6 +6,26 @@
 
 <div class="row">
   <div class="col-md-6">
-    <!--Will show tables with the last changes for each model -->
+    <div class="card">
+      <div class="card-header">
+        Last 3 users
+        <div class="float-right">
+          <%= link_to 'See All', blast.admin_users_path %>
+        </div>
+      </div>
+      <table class="table table-bordered mb-0">
+        <tbody>
+        <%- Blast::User.ordered.limit(3).each do |user| %>
+          <tr>
+            <td><%= user.id %></td>
+            <td><%= user.email %></td>
+            <td class="text-right">
+              <%= user.created_at.strftime("%d %b. %Y") %>
+            </td>
+          </tr>
+        <% end %>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
