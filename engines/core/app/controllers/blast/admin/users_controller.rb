@@ -2,7 +2,9 @@ module Blast
   module Admin
     class UsersController < AdminController
       def index
-        @users = Blast::User.ordered
+        authorize Blast::User
+        @users = policy_scope(Blast::User).ordered
+        @users_count = @users.count
       end
     end
   end

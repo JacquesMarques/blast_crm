@@ -1,4 +1,5 @@
 <h2 class='float-left'>Admin Panel</h2>
+
 <%= render 'admin/shared/nav' %>
 
 <div class='clearfix'></div>
@@ -15,7 +16,7 @@
       </div>
       <table class="table table-bordered mb-0">
         <tbody>
-        <%- Blast::User.ordered.limit(3).each do |user| %>
+        <%- @users.each do |user| %>
           <tr>
             <td><%= user.id %></td>
             <td><%= user.email %></td>

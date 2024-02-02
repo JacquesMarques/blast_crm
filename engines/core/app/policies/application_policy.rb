@@ -38,12 +38,17 @@ class ApplicationPolicy
     attr_reader :user, :scope
 
     def initialize(user, scope)
-      @user = user
+      @user  = user
       @scope = scope
     end
 
     def resolve
-      scope.all
+      # We now check if the our user is an admin
+      if user.admin?
+        scope.all
+      else
+        scope.where(published: true)
+      end
     end
   end
 end
