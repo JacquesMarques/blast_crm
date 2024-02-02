@@ -34,4 +34,13 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'devise', '~> 4.6.2'
 
   spec.add_development_dependency 'sqlite3', '~> 1.4.1'
+
+  # We're adding bootsnap here because it's a dependency of our parent
+  # and we'll need it to interact with it when running our tests
+  spec.add_development_dependency 'bootsnap', '>= 1.1.0'
+
+  spec.add_development_dependency 'database_cleaner', '~> 1.7.0'
+  spec.add_development_dependency 'factory_bot_rails', '~> 5.0.2'
+  spec.add_development_dependency 'faker', '~> 1.9.3'
+  spec.add_development_dependency 'rspec-rails', '~> 3.8.2'
 end
