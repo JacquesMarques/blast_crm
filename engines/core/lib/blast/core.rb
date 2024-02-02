@@ -1,3 +1,4 @@
+require 'devise'
 require_relative 'core/engine'
 require 'sass-rails'
 require 'bootstrap'
