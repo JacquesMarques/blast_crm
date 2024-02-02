@@ -34,6 +34,13 @@
             <%= link_to 'My Account', blast.edit_user_registration_path,
                         class: "nav-link" %>
           </li>
+
+          <% if current_user.admin? %>
+            <li class="nav-item <%= active(blast.admin_path) %>">
+              <%= link_to 'Admin', blast.admin_path, class: "nav-link" %>
+            </li>
+          <% end %>
+
           <li class="nav-item">
             <%= link_to 'Logout', blast.destroy_user_session_path,
                         class: "nav-link", method: :delete %>
