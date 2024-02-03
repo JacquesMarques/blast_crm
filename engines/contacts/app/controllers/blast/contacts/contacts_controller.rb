@@ -6,7 +6,7 @@ module Blast::Contacts
 
     # GET /contacts
     def index
-      @contacts = Contact.all
+      @contacts = current_user.contacts
     end
 
     # GET /contacts/1
@@ -25,6 +25,7 @@ module Blast::Contacts
     # POST /contacts
     def create
       @contact = Contact.new(contact_params)
+      @contact.user = current_user
 
       if @contact.save
         redirect_to [blast, @contact], notice: 'Contact was successfully created.'
