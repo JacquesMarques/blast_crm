@@ -5,6 +5,7 @@ Blast::Core::Engine.routes.draw do
     get '/' => 'admin#index'
     resources :users, only: :index
     resources :contacts, only: :index
+    resources :tasks, only: :index
   end
 
   root to: 'dashboard#index'
