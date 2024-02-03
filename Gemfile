@@ -60,3 +60,4 @@ gem 'deface', '~> 1.4.0'
 # Engines modules
 gem 'blast_core', path: './engines/core'
 gem 'blast_contacts', path: './engines/contacts'
+gem 'blast_tasks', path: './engines/tasks'
