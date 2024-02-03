@@ -23,7 +23,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item <%= active(blast.root_path) %>">
+      <li data-blast-hook='main_nav' class="nav-item <%= active(blast.root_path) %>">
         <%= link_to 'Dashboard', blast.root_path, class: 'nav-link' %>
       </li>
     </ul>
