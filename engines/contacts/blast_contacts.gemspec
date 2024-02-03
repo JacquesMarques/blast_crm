@@ -9,15 +9,14 @@ Gem::Specification.new do |s|
   s.version     = Blast::Contacts::VERSION
   s.authors     = ["Jacques Marques"]
   s.email       = ["jmarques1@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Blast::Contacts."
-  s.description = "TODO: Description of Blast::Contacts."
+  s.homepage    = "https://devblast.com"
+  s.summary     = "Contact feature for BlastCRM."
+  s.description = "Contact feature for BlastCRM."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 5.2.8.1"
 
-  s.add_dependency "deface"
+  s.add_dependency 'deface', '~> 1.4.0'
 end

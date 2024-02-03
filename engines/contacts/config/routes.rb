@@ -1,2 +1,2 @@
-Blast::Contacts::Engine.routes.draw do
+Blast::Core::Engine.routes.draw do
 end
