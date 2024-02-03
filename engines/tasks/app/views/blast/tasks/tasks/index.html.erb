@@ -12,6 +12,9 @@
     <th>ID</th>
     <th>Title</th>
     <th>Content</th>
+    <%- if Blast::Core.available?(:contacts) %>
+      <th>Contact</th>
+    <% end %>
     <th>Created At</th>
     <th></th>
     </thead>
@@ -21,6 +24,9 @@
         <td><%= task.id %></td>
         <td><%= task.title %></td>
         <td><%= task.content %></td>
+        <%- if Blast::Core.available?(:contacts) %>
+          <td><%= task.contact.email if task.contact.present? %></td>
+        <% end %>
         <td><%= task.created_at.strftime("%d %b. %Y") %></td>
         <td>
           <%= link_to 'Show', [blast, task], class: 'btn btn-primary' %>
