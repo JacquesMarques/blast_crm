@@ -8,6 +8,11 @@
     <strong>Content:</strong>
     <%= @task.content %>
     <br/>
+    <%- if Blast::Core.available?(:contacts) %>
+      <strong>Contact:</strong>
+      <%= @task.contact.email %>
+      <br/>
+    <% end %>
     <strong>User:</strong>
     <%= @task.user.email %>
     <br/>
