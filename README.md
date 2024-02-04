@@ -1,24 +1,14 @@
-# README
+# BLAST CRM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample application made with Ruby on Rails to show how can be a modular application in this platform.
 
-Things you may want to cover:
+Requirements:
 
-* Ruby version
+* Ruby 2.7.8+
 
-* System dependencies
+* Rails 5.2.8
 
-* Configuration
+* Sqlite3
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Source: https://devblast.com/r/modular-rails/
